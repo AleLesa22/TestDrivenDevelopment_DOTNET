@@ -12,6 +12,7 @@ namespace CalculatorTest
             //add calculator
             int[] numbers = {1,2,3};
             calculator.addCalculator(numbers);
+            Assert.Equal(6, calculator.addCalculator(numbers));
             
         }
 
@@ -21,6 +22,7 @@ namespace CalculatorTest
             var calculator = new Calculator();
             //substract calculator
             calculator.substractCalculator(10, 5);
+            Assert.Equal(5,calculator.substractCalculator(10, 5));
         }
 
         [Fact]
@@ -28,6 +30,7 @@ namespace CalculatorTest
         {
             var calculator = new Calculator();
             calculator.divideCalculator(10, 5);
+            Assert.Equal(2, calculator.substractCalculator(10, 5));
         }
 
         [Fact]
@@ -35,6 +38,7 @@ namespace CalculatorTest
         {
             var calculator = new Calculator();
             calculator.multiplicationCalculator(10, 5);
+            Assert.Equal(50, calculator.multiplicationCalculator(10, 5));
         }
 
 
@@ -55,6 +59,7 @@ namespace CalculatorTest
             double[] doubleNumbers = { 1.5, 2.7, 3.5 };
             var calculator = new Calculator();
             calculator.averageCalculator(doubleNumbers);
+            Assert.Equal(2.566666666666667, calculator.averageCalculator(doubleNumbers));
         }
 
         [Fact]
@@ -63,6 +68,7 @@ namespace CalculatorTest
             var calculator = new Calculator();
             int[] numbers = { 1, 2, 3 };
             calculator.minCalculator(numbers);
+            Assert.Equal(1, calculator.minCalculator(numbers));
         }
 
         [Fact]
@@ -71,6 +77,7 @@ namespace CalculatorTest
             var calculator = new Calculator();
             int[] numbers = { 1, 2, 3 };
             calculator.maxCalculator(numbers);
+            Assert.Equal(3, calculator.maxCalculator(numbers));
         }
 
         [Fact]
@@ -80,5 +87,6 @@ namespace CalculatorTest
             List<int> a2 = new List<int>();
             calculator.addCalculatorToArray(a2);
         }
+
     }
 }

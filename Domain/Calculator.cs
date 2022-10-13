@@ -73,8 +73,8 @@
 
         public int minCalculator(int[] numbers)
         {
-            int min = int.MaxValue;
-            if(numbers.Length<=1)
+            int min = 2147483646;
+            if (numbers.Length<=1)
             {
                 throw new Exception("You only have one element in array");
             }
@@ -84,7 +84,7 @@
                 {
                     if (numbers[i]<min)
                     {
-                        min = min + numbers[i];
+                        min = numbers[i];
                     }
                 }
                 return min;
@@ -94,7 +94,7 @@
 
         public int maxCalculator(int[] numbers)
         {
-            int max = int.MinValue;
+            int max = 0;
             if (numbers.Length <= 1)
             {
                 throw new Exception("You only have one element in array");
@@ -103,9 +103,9 @@
             {
                 for (int i = 0; i < numbers.Length; i++)
                 {
-                    if (numbers[i] < max)
+                    if (numbers[i] > max)
                     {
-                        max = max + numbers[i];
+                        max = numbers[i];
                     }
                 }
                 return max;
